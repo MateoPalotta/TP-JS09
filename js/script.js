@@ -25,7 +25,7 @@ class CAutores {
     });
   }
 
-  AutoresArgentinos() {
+  function AutoresArgentinos() {
     const nombresArgentinos = [];
     for (let i = 0; i < this.datosAutores.length; i++) {
       if (this.datosAutores[i].nacionalidad === "Argentino") {
@@ -35,7 +35,7 @@ class CAutores {
     return nombresArgentinos;
   }
 
-  AutoresAnioPublicacion() {
+  function AutoresAnioPublicacion() {
     const nombresPublicacion1960_1980 = [];
     for (let i = 0; i < this.datosAutores.length; i++) {
       if (this.datosAutores[i].anioPubli >= 1960 && this.datosAutores[i].anioPubli <= 1980) {
@@ -45,7 +45,7 @@ class CAutores {
     return nombresPublicacion1960_1980;
   }
 
-  promedioEdadPublicacion() {
+  function promedioEdadPublicacion() {
     let sumaEdades = 0;
     for (let i = 0; i < this.datosAutores.length; i++) {
       sumaEdades += this.datosAutores[i].edadPubli;
@@ -55,7 +55,7 @@ class CAutores {
     return sumaEdades / totalAutores;
   }
 
-  mostrarNombresAutores() {
+  function mostrarNombresAutores() {
     const nombresAutores = [];
     for (let i = 0; i < this.datosAutores.length; i++) {
       nombresAutores.push(this.datosAutores[i].nombre + " " + this.datosAutores[i].apellido);
